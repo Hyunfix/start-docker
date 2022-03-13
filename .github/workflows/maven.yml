@@ -28,7 +28,7 @@ jobs:
       - name: Build & push Docker image
         uses: mr-smithers-excellent/docker-build-push@v5
         with:
-          image: velzog/spring-boot-images
+          image: velzog/spring-boot-docker.jar
           tags: latest
           registry: docker.io
           dockerfile: Dockerfile
