@@ -1,1 +1,3 @@
-com/javatechie/consul/api/SpringBootDockerApplication.class
+com/test/streaming/SpringBootDockerApplication.class
+com/test/streaming/OrderController.class
+com/test/streaming/ItemController.class
