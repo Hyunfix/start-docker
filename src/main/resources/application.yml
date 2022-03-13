@@ -10,11 +10,16 @@ resilience4j:
         permittedNumberOfCallsInHalfOpenState: 3
         slidingWindowSize: 10
         waitDurationInOpenState: 5s
-        slindingWindowType: COUNT-BASED
+        slindingWindowType: COUNT_BASED
 
 management:
   health:
     circuitbreakers:
       enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: health
   endpoint:
-    enabled: true
+    health:
+      show-details: always
