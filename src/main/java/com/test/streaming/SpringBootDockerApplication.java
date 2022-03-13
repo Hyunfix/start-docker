@@ -1,23 +1,23 @@
-package com.javatechie.consul.api;
+package com.test.streaming;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.context.annotation.Bean;
+import org.springframework.web.client.RestTemplate;
 
 
 @SpringBootApplication
-@RestController
 public class SpringBootDockerApplication {
 
 	public static void main(String[] args)
 	{
+
 		SpringApplication.run(SpringBootDockerApplication.class, args);
 	}
 
-	@GetMapping("/welcome")
-	public String welcome(){
-		return "Bienvenue sur mon test docker !";
+	@Bean(name="restTemplate")
+	public RestTemplate getRestTemplate(){
+		return new RestTemplate();
 	}
 
 }
